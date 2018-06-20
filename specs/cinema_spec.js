@@ -30,7 +30,7 @@ describe('Cinema', function () {
   });
 
   it('should be able to filter films by genre', function () {
-    assert.deepStrictEqual(cinema.getFilmsByGenre('drama'), [moonlight, trainspotting])
+    assert.deepStrictEqual(cinema.getFilmsByProperty('genre', 'drama'), [moonlight, trainspotting])
   });
 
   it('should be able to check whether there are some films from a particular year', function () {
@@ -51,7 +51,7 @@ describe('Cinema', function () {
   });
 
   it('should be able to filter films by year', function () {
-    assert.deepStrictEqual(cinema.getFilmsByYear(2017), [bladeRunner, dunkirk, trainspotting]);
+    assert.deepStrictEqual(cinema.getFilmsByProperty('year', 2017), [bladeRunner, dunkirk, trainspotting]);
   });
 
 });
